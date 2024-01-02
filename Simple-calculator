@@ -2,23 +2,23 @@
 using namespace std;
 class calculator{
     public:
-    float op1,op2;
+    double op1,op2;
     calculator(){
         cout<<"Enter operand 1 :";
         cin>>op1;
         cout<<"Enter operand 2 :";
         cin>>op2;
     }
-    float sum(){
+    double sum(){
         return op1+op2;
     }
-    float sub(){
+    double sub(){
         return op1-op2;
     }
-    float mul(){
+    double mul(){
         return op1*op2;
     }
-    float div(){
+    double div(){
         return op1/op2;
     }
 };
@@ -36,6 +36,8 @@ int main(){
         case 3:cout<<"Product of "<<calc.op1<<" and "<<calc.op2<<" is "<<calc.mul();
             break;
         case 4:cout<<"Quotient of "<<calc.op1<<" and "<<calc.op2<<" is "<<calc.div();
+            break;
+        default:cout<<"\nOperation not available\n";
             break;
     }
     return 0;
